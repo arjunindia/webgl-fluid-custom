@@ -7,13 +7,13 @@
 <p align="center">
   ES Module support for <a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation">WebGL-Fluid-Simulation</a>.
   <br>
-  🕹 <a href="#">Playground</a>
+  🕹 <a href="https://rodrigueztheo.github.io/webgl-fluid-custom/">Playground</a>
 </p>
 
 
 <div style="display: flex; justify-content: center;">
   <a href="https://www.npmjs.com/package/webgl-fluid-custom?activeTab=dependencies" style="margin: 0 8px;"><img alt="zero dependencies" src="https://img.shields.io/badge/dependencies-0-green.svg"></a>
-  <a href="https://bundlephobia.com/package/webgl-fluid-custom@0.1.0" style="margin: 0 8px;"><img alt="minzipped size" src="https://img.shields.io/bundlephobia/minzip/webgl-fluid-custom@0.1.0"></a>
+  <a href="https://bundlephobia.com/package/webgl-fluid-custom" style="margin: 0 8px;"><img alt="minzipped size" src="https://img.shields.io/bundlephobia/minzip/webgl-fluid-custom@0.1.0"></a>
   <a href="https://npmcharts.com/compare/webgl-fluid-custom" style="margin: 0 8px;"><img alt="npm downloads" src="https://img.shields.io/npm/dt/webgl-fluid-custom?logo=npm&color=rgba(203,0,0,0.9)"></a>
 </div>
 
