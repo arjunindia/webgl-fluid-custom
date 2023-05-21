@@ -33,7 +33,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "doc": "vitepress dev --open /README",
-    "release": "npx lint-staged && pnpm build && cl release"
+    "release": "npx lint-staged && npm run build && cl release"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
