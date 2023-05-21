@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://npmjs.com/package/webgl-fluid" target="_blank" rel="noopener noreferrer">
+  <a href="https://npmjs.com/package/webgl-fluid-custom" target="_blank" rel="noopener noreferrer">
     WebGL Fluid Custom<sup></sup>
   </a>
 </h1>
@@ -12,10 +12,9 @@
 
 
 <div style="display: flex; justify-content: center;">
-  <a href="https://www.npmjs.com/package/webgl-fluid?activeTab=dependencies" style="margin: 0 8px;"><img alt="zero dependencies" src="https://img.shields.io/badge/dependencies-0-green.svg"></a>
-  <a href="https://bundlephobia.com/package/webgl-fluid" style="margin: 0 8px;"><img alt="minzipped size" src="https://img.shields.io/bundlephobia/minzip/webgl-fluid"></a>
-  <a href="https://npmcharts.com/compare/webgl-fluid" style="margin: 0 8px;"><img alt="npm downloads" src="https://img.shields.io/npm/dt/webgl-fluid?logo=npm&color=rgba(203,0,0,0.9)"></a>
-  <a href="https://conventionalcommits.org" style="margin: 0 8px;"><img alt="conventional commits" src="https://img.shields.io/badge/commits-Conventional-FE5196.svg?logo=conventionalcommits"></a>
+  <a href="https://www.npmjs.com/package/webgl-fluid-custom?activeTab=dependencies" style="margin: 0 8px;"><img alt="zero dependencies" src="https://img.shields.io/badge/dependencies-0-green.svg"></a>
+  <a href="https://bundlephobia.com/package/webgl-fluid-custom@0.1.0" style="margin: 0 8px;"><img alt="minzipped size" src="https://img.shields.io/bundlephobia/minzip/webgl-fluid-custom@0.1.0"></a>
+  <a href="https://npmcharts.com/compare/webgl-fluid-custom" style="margin: 0 8px;"><img alt="npm downloads" src="https://img.shields.io/npm/dt/webgl-fluid-custom?logo=npm&color=rgba(203,0,0,0.9)"></a>
 </div>
 
 <br>
@@ -55,7 +54,7 @@ npm i webgl-fluid-custom
   <script type="importmap">
     {
       "imports": {
-        "webgl-fluid": "https://cdn.jsdelivr.net/npm/webgl-fluid@0.3/dist/webgl-fluid-custom.mjs"
+        "webgl-fluid-custom": "https://cdn.jsdelivr.net/npm/webgl-fluid-custom/dist/webgl-fluid-custom.mjs"
       }
     }
   </script>
@@ -83,7 +82,7 @@ npm i webgl-fluid-custom
 
 <body>
   <canvas style="width: 100vw; height: 100vh;" />
-  <script src="https://cdn.jsdelivr.net/npm/webgl-fluid@0.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/webgl-fluid-custom"></script>
   <script>
     WebGLFluidCustom(document.querySelector('canvas'), {
       // options
@@ -199,6 +198,6 @@ WebGLFluidCustom(document.querySelector('canvas'), {
 
 ## Changelog
 
-Detailed changes for each release are documented in the [release notes](https://github.com/cloydlau/webgl-fluid/releases).
+Detailed changes for each release are documented in the [release notes](https://github.com/RodriguezTheo/webgl-fluid-custom).
 
 <br>
