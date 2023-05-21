@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <canvas style="width: 100vw; height: 100vh; background: rgba(0, 0, 0, 1);" />
+  <script type="importmap">
+    {
+      "imports": {
+        "webgl-fluid-custom": "./dist/webgl-fluid-custom.mjs"
+      }
+    }
+  </script>
+  <script type="module">
+    import WebGLFluidCustom from './dist/webgl-fluid-custom.mjs';
+
+    WebGLFluidCustom(document.querySelector('canvas'), {
+      TRANSPARENT: true,
+      IMMEDIATE: false,
+      TRIGGER: 'click',
+      UNIQUE_COLOR: false,
+      COLOR: { r: 50, g: 50, b: 50 },
+      COLOR_UPDATE_SPEED: 10,
+      GUI: true,
+      DENSITY_DISSIPATION: 0.98,
+      VELOCITY_DISSIPATION: 0.99,
+      PRESSURE: 0.8,
+      PRESSURE_ITERATIONS: 25,
+      CURL: 30,
+      SPLAT_RADIUS: 0.05,
+      SPLAT_FORCE: 6000,
+    })
+  </script>
+</body>
+
+</html>

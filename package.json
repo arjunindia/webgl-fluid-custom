@@ -1,0 +1,52 @@
+{
+  "name": "webgl-fluid-custom",
+  "PascalCasedName": "WebGLFluidCustom",
+  "version": "0.1.0",
+  "private": false,
+  "description": "ES Module support for https://github.com/PavelDoGreat/WebGL-Fluid-Simulation.",
+  "author": "Theo Rodriguez",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "webgl",
+    "fluid",
+    "background"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/webgl-fluid-custom.umd.js",
+      "import": "./dist/webgl-fluid-custom.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/webgl-fluid-custom.umd.js",
+  "module": "./dist/webgl-fluid-custom.mjs",
+  "unpkg": "./dist/webgl-fluid-custom.umd.js",
+  "jsdelivr": "./dist/webgl-fluid-custom.umd.js",
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "doc": "vitepress dev --open /README",
+    "release": "npx lint-staged && pnpm build && cl release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "case-police": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "vite": "latest",
+    "vitepress": "latest"
+  },
+  "lint-staged": {
+    "*.md": "case-police --fix"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
