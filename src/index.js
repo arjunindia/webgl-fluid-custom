@@ -472,9 +472,9 @@ export default function (el, config) {
   function resizeCanvas() {
     let width = scaleByPixelRatio(canvas.clientWidth)
     let height = scaleByPixelRatio(canvas.clientHeight)
-    if (canvas.width != width || canvas.height != height) {
-      canvas.width = width
-      canvas.height = height
+    if ((canvas.width != width || canvas.height != height) && (Math.floor(width)>=0 && Math.floor(height)>=0)) {
+      canvas.width = Math.floor(width)
+      canvas.height = Math.floor(height)
       return true
     }
     return false
