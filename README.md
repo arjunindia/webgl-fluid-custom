@@ -49,7 +49,7 @@ npm i webgl-fluid-custom
   <meta charset="UTF-8">
 </head>
 
-<body>
+<body id="canvasParent">
   <canvas style="width: 100vw; height: 100vh;" />
   <script type="importmap">
     {
@@ -63,7 +63,7 @@ npm i webgl-fluid-custom
 
     WebGLFluidCustom(document.querySelector('canvas'), {
       // options
-    })
+    },document.querySelector("#canvasParent"))
   </script>
 </body>
 
@@ -80,13 +80,13 @@ npm i webgl-fluid-custom
   <meta charset="UTF-8">
 </head>
 
-<body>
+<body id="canvasParent">
   <canvas style="width: 100vw; height: 100vh;" />
   <script src="https://cdn.jsdelivr.net/npm/webgl-fluid-custom"></script>
   <script>
-    WebGLFluidCustom(document.querySelector('canvas'), {
+   WebGLFluidCustom(document.querySelector('canvas'), {
       // options
-    })
+    },document.querySelector("#canvasParent"))
   </script>
 </body>
 

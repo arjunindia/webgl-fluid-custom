@@ -1,6 +1,5 @@
 'use strict'
 
-import './dat.gui.min'
 import isMobile from './utils/isMobile'
 import getWebGLContext from './utils/webglContext'
 import pointerPrototype from './utils/pointers';
@@ -28,11 +27,10 @@ import {
   pressureShaderExport,
   gradientSubstractShaderExport,
 } from './shaders';
-import startGUI from './utils/startGUI';
 
 
 
-export default function (el, config) {
+export default function (el, config,trigEl) {
   const canvas = el
   resizeCanvas()
 
@@ -66,7 +64,6 @@ export default function (el, config) {
     SUNRAYS: false,
     SUNRAYS_RESOLUTION: 196,
     SUNRAYS_WEIGHT: 1.0,
-    GUI: true,
     ...config,
   }
 
@@ -96,11 +93,6 @@ export default function (el, config) {
     config.SHADING = false
     config.BLOOM = false
     config.SUNRAYS = false
-  }
-
-
-  if(config.GUI){
-    startGUI(config, updateKeywords, initFramebuffers, splatStack)
   }
 
   class Material {
@@ -749,7 +741,7 @@ export default function (el, config) {
   }
 
   if(config.TRIGGER === "hover"){
-    canvas.addEventListener('mouseenter', e => {
+    trigEl.addEventListener('mouseenter', e => {
       let posX = scaleByPixelRatio(e.offsetX)
       let posY = scaleByPixelRatio(e.offsetY)
       let pointer = pointers.find(p => p.id == -1)
@@ -760,7 +752,7 @@ export default function (el, config) {
   }
 
   if(config.TRIGGER === "click"){
-    canvas.addEventListener('mousedown', e => {
+    trigEl.addEventListener('mousedown', e => {
       let posX = scaleByPixelRatio(e.offsetX)
       let posY = scaleByPixelRatio(e.offsetY)
       let pointer = pointers.find(p => p.id == -1)
@@ -772,7 +764,7 @@ export default function (el, config) {
 
   
   setTimeout(() => {
-    canvas.addEventListener('mousemove', e => {
+    trigEl.addEventListener('mousemove', e => {
       let posX = scaleByPixelRatio(e.offsetX)
       let posY = scaleByPixelRatio(e.offsetY)
       updatePointerMoveData(pointers[0], posX, posY)
@@ -784,7 +776,7 @@ export default function (el, config) {
     updatePointerUpData(pointers[0])
   })
 
-  canvas.addEventListener('touchstart', e => {
+  trigEl.addEventListener('touchstart', e => {
     e.preventDefault()
     const touches = e.targetTouches
     while (touches.length >= pointers.length)
@@ -796,7 +788,7 @@ export default function (el, config) {
     }
   })
 
-  canvas.addEventListener('touchmove', e => {
+  trigEl.addEventListener('touchmove', e => {
     e.preventDefault()
     const touches = e.targetTouches
     for (let i = 0; i < touches.length; i++) {
@@ -813,15 +805,6 @@ export default function (el, config) {
       updatePointerUpData(pointer)
     }
   })
-
-  if(config.GUI){
-    window.addEventListener('keydown', e => {
-      if (e.code === 'KeyP')
-        config.PAUSED = !config.PAUSED
-      if (e.key === ' ')
-        splatStack.push(parseInt(Math.random() * 20) + 5)
-    })
-  }
 
   function updatePointerDownData(pointer, id, posX, posY) {
     pointer.id = id

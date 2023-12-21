@@ -1,29 +1,29 @@
 {
-  "name": "webgl-fluid-custom",
-  "PascalCasedName": "WebGLFluidCustom",
-  "version": "0.1.1",
+  "name": "webgl-fluid-offscreen",
+  "PascalCasedName": "WebGLFluidOffscreen",
+  "version": "0.1.5",
   "private": false,
-  "description": "ES Module support for https://github.com/PavelDoGreat/WebGL-Fluid-Simulation.",
-  "author": "Theo Rodriguez",
+  "description": "ES Module support for https://github.com/PavelDoGreat/WebGL-Fluid-Simulation. With OffScreenCanvas fix",
+  "author": "Arjun S",
   "license": "MIT",
   "repository": "",
   "keywords": [
     "webgl",
     "fluid",
-    "custom",
+    "offscreen",
     "background"
   ],
   "exports": {
     ".": {
-      "require": "./dist/webgl-fluid-custom.umd.js",
-      "import": "./dist/webgl-fluid-custom.mjs"
+      "require": "./dist/webgl-fluid-offscreen.umd.js",
+      "import": "./dist/webgl-fluid-offscreen.mjs"
     },
     "./*": "./*"
   },
-  "main": "./dist/webgl-fluid-custom.umd.js",
-  "module": "./dist/webgl-fluid-custom.mjs",
-  "unpkg": "./dist/webgl-fluid-custom.umd.js",
-  "jsdelivr": "./dist/webgl-fluid-custom.umd.js",
+  "main": "./dist/webgl-fluid-offscreen.umd.js",
+  "module": "./dist/webgl-fluid-offscreen.mjs",
+  "unpkg": "./dist/webgl-fluid-offscreen.umd.js",
+  "jsdelivr": "./dist/webgl-fluid-offscreen.umd.js",
   "files": [
     "dist",
     "docs"
