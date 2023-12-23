@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://npmjs.com/package/webgl-fluid-custom" target="_blank" rel="noopener noreferrer">
-    WebGL Fluid Custom<sup></sup>
+    WebGL Fluid offscreen<sup></sup>
   </a>
 </h1>
 
